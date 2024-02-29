@@ -6,16 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class Sale extends Model
+class Product extends Model
 {
     use HasFactory;
 
-    protected $casts = [
-        "status" => \App\Enum\Sale::class
-    ];
-
-    public function Products(): BelongsToMany
+    public function Sale(): BelongsToMany
     {
-        return $this->belongsToMany(Product::class);
+        return $this->belongsToMany(Sale::class);
     }
 }
