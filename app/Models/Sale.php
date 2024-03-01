@@ -11,7 +11,7 @@ class Sale extends Model
     use HasFactory;
 
     protected $casts = [
-        "status" => \App\Enum\Sale::class
+        'status' => \App\Enum\Sale::class,
     ];
 
     public function Products(): BelongsToMany

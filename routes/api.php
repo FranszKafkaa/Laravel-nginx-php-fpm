@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Product\ProductCreateController;
+use App\Http\Controllers\Product\ProductDeleteController;
+use App\Http\Controllers\Product\ProductEditController;
+use App\Http\Controllers\Product\ProductListController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,5 +27,8 @@ Route::name('sales.')->prefix('sales')->group(function () {
 });
 
 Route::name('products.')->prefix('product')->group(function () {
-
+    Route::get('/', ProductListController::class)->name('index');
+    Route::post('/create', ProductCreateController::class)->name('create');
+    Route::put('/edit/{id}', ProductEditController::class)->name('edit');
+    Route::delete('/delete/{id}', ProductDeleteController::class)->name('delete');
 });
