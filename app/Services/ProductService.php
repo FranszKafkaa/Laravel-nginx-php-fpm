@@ -15,7 +15,7 @@ class ProductService
 
     public function store(FormRequest $product): Product
     {
-        $ProductDAO = new Product([$product->get('name'), $product->get('price')]);
+        $ProductDAO = new Product($product->all());
         $ProductDAO->save();
 
         return $ProductDAO;

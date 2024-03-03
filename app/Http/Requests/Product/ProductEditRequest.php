@@ -34,11 +34,7 @@ class ProductEditRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'name.required' => 'Name is mandatory',
             'name.string' => 'Name must be String',
-            'name.max' => 'Name Must be at max 10 letters',
-
-            'price.required' => 'Price is Mandatory',
             'price.numeric' => 'Price must be a numeric',
         ];
     }

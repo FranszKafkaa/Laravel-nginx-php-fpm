@@ -26,7 +26,7 @@ Route::name('sales.')->prefix('sales')->group(function () {
 
 });
 
-Route::name('products.')->prefix('product')->group(function () {
+Route::name('product.')->prefix('product')->group(function () {
     Route::get('/', ProductListController::class)->name('index');
     Route::post('/create', ProductCreateController::class)->name('create');
     Route::put('/edit/{id}', ProductEditController::class)->name('edit');

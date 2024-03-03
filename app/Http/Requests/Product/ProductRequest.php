@@ -36,7 +36,7 @@ class ProductRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'name.required' => 'Name is mandatory',
+            'name.required' => 'Name is Mandatory',
             'name.string' => 'Name must be String',
             'name.max' => 'Name Must be at max 10 letters',
 
