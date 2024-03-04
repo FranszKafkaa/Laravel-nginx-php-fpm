@@ -109,7 +109,7 @@ curl --request GET \
 }
 ```
 
-# /api/product/create {#secao2}
+# <a name="secao2">/api/product/create</a>
 ### Cadastra um novo produto
 ```bash
 curl --request POST \
@@ -135,7 +135,7 @@ curl --request POST \
     }
 }
 ```
-# /api/product/{product} {#secao3}
+#  <a name="secao3">/api/product/{product}</a>
 ### Mostra um produto em especifico
 ```bash
 curl --request GET \
@@ -155,7 +155,7 @@ curl --request GET \
 }
 ```
 
-# /api/product/edit/{product} {#secao4}
+#  <a name="secao4">/api/product/edit/{product}</a> 
 ### Edita um produto
 ```bash
 curl --request PUT \
@@ -182,7 +182,7 @@ curl --request PUT \
 }
 ```
 
-# /api/product/delete/{product} {#secao5}
+# <a name="secao5">/api/product/delete/{product}</a>
 ### deleta o produto
 ```bash
 curl --request DELETE \
@@ -275,7 +275,7 @@ curl --request GET \
 	}
 }
 ```
-# /api/sale/create {#secao7}
+# <a name="secao7">/api/sale/create</a>
 ### Cadastra uma nova Sale
 ```bash
 curl --request POST \
@@ -321,7 +321,7 @@ curl --request POST \
 	}
 }
 ```
-# /api/sale/{sale} {#secao8}
+# <a name="secao8">/api/sale/{sale}</a> 
 ### Mostra uma Sale em especifico
 ```bash
 curl --request GET \
@@ -341,7 +341,7 @@ curl --request GET \
     }
 }
 ```
-# /api/sale/edit/{sale} {#secao9}
+# <a name="secao9">/api/sale/edit/{sale}</a>
 ### Edita uma Sale
 ```bash
 curl --request PUT \
@@ -394,7 +394,7 @@ curl --request PUT \
 	}
 }
 ```
-# /api/sale/delete/{sale} {#secao10}
+# <a name="secao10">/api/sale/delete/{sale}</a>
 ### deleta o produto
 ```bash
 curl --request DELETE \
