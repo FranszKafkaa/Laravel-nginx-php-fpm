@@ -8,8 +8,8 @@ use App\Models\Product;
 
 class ProductDeleteController extends Controller
 {
-    public function __invoke(Product $id)
+    public function __invoke(Product $product)
     {
-        return new ProductResource(app('product')->delete($id));
+        return new ProductResource(app('product')->delete($product));
     }
 }

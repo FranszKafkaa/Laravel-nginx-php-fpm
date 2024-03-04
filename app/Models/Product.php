@@ -19,6 +19,6 @@ class Product extends Model
 
     public function Sale(): BelongsToMany
     {
-        return $this->belongsToMany(Sale::class);
+        return $this->belongsToMany(Sale::class)->withPivot('amount');
     }
 }

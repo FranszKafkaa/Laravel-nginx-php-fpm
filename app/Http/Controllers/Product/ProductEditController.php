@@ -9,8 +9,8 @@ use App\Models\Product;
 
 class ProductEditController extends Controller
 {
-    public function __invoke(ProductEditRequest $request, Product $id)
+    public function __invoke(ProductEditRequest $request, Product $product)
     {
-        return new ProductResource(app('product')->update($id, $request));
+        return new ProductResource(app('product')->update($product, $request));
     }
 }

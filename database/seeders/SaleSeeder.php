@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Product;
 use App\Models\Sale;
 use Illuminate\Database\Seeder;
 
@@ -13,9 +14,11 @@ class SaleSeeder extends Seeder
     public function run(): void
     {
         $sale = new Sale();
-        $sale->status = \App\Enum\Sale::APROVED;
+        $product = Product::find(1);
+
+        $sale->amount = $product->price;
         $sale->save();
 
-        $sale->Products()->attach(1);
+        $sale->Products()->attach($product->id, ['amount' => 1]);
     }
 }
