@@ -215,21 +215,27 @@ curl --request GET \
 {
 	"data": [
 		{
-			"sale_id": 1,
-			"amount": 6000,
+			"sale_id": 2,
+			"amount": 27600,
 			"status": "APPROVED",
 			"products": [
 				{
 					"product_id": 1,
 					"name": "Motorola",
 					"price": 1300,
-					"amount": 1
+					"amount": 2
+				},
+				{
+					"product_id": 2,
+					"name": "Play 5",
+					"price": 5000,
+					"amount": 5
 				}
 			]
 		},
 		{
-			"sale_id": 2,
-			"amount": 6000,
+			"sale_id": 3,
+			"amount": 1300,
 			"status": "APPROVED",
 			"products": [
 				{
