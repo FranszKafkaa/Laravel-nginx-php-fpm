@@ -404,7 +404,7 @@ curl --request DELETE \
 #### Retorno
 
 ```json
-{
+
 {
 	"data": {
 		"sale_id": 1,
@@ -420,5 +420,5 @@ curl --request DELETE \
 		]
 	}
 }
-}
+
 ```
