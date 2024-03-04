@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
-            $table->float('amount');
+            $table->float('amount')->default(0);
             $table->tinyInteger('status');
             $table->timestamps();
         });

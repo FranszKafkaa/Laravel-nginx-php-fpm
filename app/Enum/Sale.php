@@ -4,13 +4,13 @@ namespace App\Enum;
 
 enum Sale: int
 {
-    case APROVED = 1;
+    case APPROVED = 1;
     case CANCELLED = 0;
 
     public static function value(int $value): string
     {
         return [
-            self::APROVED => 'Aproved',
+            self::APPROVED => 'Approved',
             self::CANCELLED => 'Cancelled',
         ][$value];
     }

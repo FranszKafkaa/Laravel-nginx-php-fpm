@@ -10,7 +10,7 @@ class SaleService
 {
     public function list(): LengthAwarePaginator
     {
-        return Sale::where('status', \App\Enum\Sale::APROVED)->paginate();
+        return Sale::where('status', \App\Enum\Sale::APPROVED)->paginate();
     }
 
     public function store(array $data): Sale
@@ -33,14 +33,15 @@ class SaleService
         return $sale;
     }
 
-    public function delete(Sale $sale): Sale {
+    public function delete(Sale $sale): Sale
+    {
         $sale->status = \App\Enum\Sale::CANCELLED;
         $sale->update();
 
         return $sale;
     }
 
-    private static function amountCount(array $data, ?Sale $sale = null): float
+    public static function amountCount(array $data, ?Sale $sale = null): float
     {
         $amount = 0;
 
@@ -54,6 +55,6 @@ class SaleService
             }
         }
 
-        return $amount;
+        return round($amount, 2);
     }
 }

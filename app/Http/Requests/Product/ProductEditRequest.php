@@ -28,14 +28,19 @@ class ProductEditRequest extends FormRequest
             'price' => [
                 'numeric',
             ],
+
+            'description' => [
+                'string',
+            ],
         ];
     }
 
     public function messages(): array
     {
         return [
-            'name.string' => 'Name must be String',
-            'price.numeric' => 'Price must be a numeric',
+            'name.string' => 'Name deve ser uma string',
+            'price.numeric' => 'Price deve ser numerico',
+            'description.string' => 'description deve ser uma string',
         ];
     }
 }

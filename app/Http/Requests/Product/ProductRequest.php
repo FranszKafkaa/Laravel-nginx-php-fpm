@@ -30,18 +30,26 @@ class ProductRequest extends FormRequest
                 'required',
                 'numeric',
             ],
+
+            'description' => [
+                'required',
+                'string',
+            ],
         ];
     }
 
     public function messages(): array
     {
         return [
-            'name.required' => 'Name is Mandatory',
-            'name.string' => 'Name must be String',
-            'name.max' => 'Name Must be at max 10 letters',
+            'name.required' => 'Name é obrigatorio',
+            'name.string' => 'Name deve ser uma string',
 
-            'price.required' => 'Price is Mandatory',
-            'price.numeric' => 'Price must be a numeric',
+            'price.required' => 'Price é obrigatorio',
+            'price.numeric' => 'Price deve ser numerico',
+
+            'description.required' => 'description é obrigatorio',
+            'description.string' => 'description deve ser uma string',
+
         ];
     }
 }

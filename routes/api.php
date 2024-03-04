@@ -4,6 +4,7 @@ use App\Http\Controllers\Product\ProductCreateController;
 use App\Http\Controllers\Product\ProductDeleteController;
 use App\Http\Controllers\Product\ProductEditController;
 use App\Http\Controllers\Product\ProductListController;
+use App\Http\Controllers\Product\ProductShowController;
 use App\Http\Controllers\Sale\SaleCreateController;
 use App\Http\Controllers\Sale\SaleDeleteController;
 use App\Http\Controllers\Sale\SaleEditController;
@@ -31,6 +32,7 @@ Route::name('sale.')->prefix('sale')->group(function () {
 
 Route::name('product.')->prefix('product')->group(function () {
     Route::get('/', ProductListController::class)->name('index');
+    Route::get('{product}', ProductShowController::class)->name('show');
     Route::post('/create', ProductCreateController::class)->name('create');
     Route::put('/edit/{product}', ProductEditController::class)->name('edit');
     Route::delete('/delete/{product}', ProductDeleteController::class)->name('delete');

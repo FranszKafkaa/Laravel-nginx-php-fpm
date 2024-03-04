@@ -23,6 +23,11 @@ class ProductService
 
     public function update(Product $product, FormRequest $request): Product
     {
+        foreach($product->Sale as $sale){
+           $sale->amount = SaleService::amountCount([], $sale);
+           $sale->update();
+        }
+
         $product->update($request->all());
 
         return $product;

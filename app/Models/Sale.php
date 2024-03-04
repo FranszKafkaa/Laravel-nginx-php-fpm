@@ -10,12 +10,16 @@ class Sale extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'amount',
+    ];
+
     protected $casts = [
         'status' => \App\Enum\Sale::class,
     ];
 
     protected $attributes = [
-        'status' => \App\Enum\Sale::APROVED,
+        'status' => \App\Enum\Sale::APPROVED,
     ];
 
     public function attachProducts(array $data)

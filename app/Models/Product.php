@@ -15,6 +15,7 @@ class Product extends Model
     protected $fillable = [
         'name',
         'price',
+        'description',
     ];
 
     public function Sale(): BelongsToMany

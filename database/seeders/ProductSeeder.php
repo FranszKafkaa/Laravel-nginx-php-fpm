@@ -12,6 +12,6 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        Product::create(['name' => 'Iphone 15 pro max', 'price' => 6000]);
+        Product::create(['name' => 'Iphone 15 pro max', 'price' => 6000, 'description' => 'ola pessoas']);
     }
 }
