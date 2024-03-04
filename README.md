@@ -213,72 +213,72 @@ curl --request GET \
 #### Retorno
 ```json
 {
-	"data": [
-		{
-			"sale_id": 2,
-			"amount": 27600,
-			"status": "APPROVED",
-			"products": [
-				{
-					"product_id": 1,
-					"name": "Motorola",
-					"price": 1300,
-					"amount": 2
-				},
-				{
-					"product_id": 2,
-					"name": "Play 5",
-					"price": 5000,
-					"amount": 5
-				}
-			]
-		},
-		{
-			"sale_id": 3,
-			"amount": 1300,
-			"status": "APPROVED",
-			"products": [
-				{
-					"product_id": 1,
-					"name": "Motorola",
-					"price": 1300,
-					"amount": 1
-				}
-			]
-		}
-	],
-	"links": {
-		"first": "http:\/\/localhost\/api\/sale?page=1",
-		"last": "http:\/\/localhost\/api\/sale?page=1",
-		"prev": null,
-		"next": null
-	},
-	"meta": {
-		"current_page": 1,
-		"from": 1,
-		"last_page": 1,
-		"links": [
-			{
-				"url": null,
-				"label": "&laquo; Previous",
-				"active": false
-			},
-			{
-				"url": "http:\/\/localhost\/api\/sale?page=1",
-				"label": "1",
-				"active": true
-			},
-			{
-				"url": null,
-				"label": "Next &raquo;",
-				"active": false
-			}
-		],
-		"path": "http:\/\/localhost\/api\/sale",
-		"per_page": 15,
-		"to": 2,
-		"total": 2
-	}
+    "data": [
+        {
+            "sale_id": 2,
+            "amount": 27600,
+            "status": "APPROVED",
+            "products": [
+                {
+                    "product_id": 1,
+                    "name": "Motorola",
+                    "price": 1300,
+                    "amount": 2
+                },
+                {
+                    "product_id": 2,
+                    "name": "Play 5",
+                    "price": 5000,
+                    "amount": 5
+                }
+            ]
+        },
+        {
+            "sale_id": 3,
+            "amount": 1300,
+            "status": "APPROVED",
+            "products": [
+                {
+                    "product_id": 1,
+                    "name": "Motorola",
+                    "price": 1300,
+                    "amount": 1
+                }
+            ]
+        }
+    ],
+    "links": {
+        "first": "http:\/\/localhost\/api\/sale?page=1",
+        "last": "http:\/\/localhost\/api\/sale?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "links": [
+            {
+                "url": null,
+                "label": "&laquo; Previous",
+                "active": false
+            },
+            {
+                "url": "http:\/\/localhost\/api\/sale?page=1",
+                "label": "1",
+                "active": true
+            },
+            {
+                "url": null,
+                "label": "Next &raquo;",
+                "active": false
+            }
+        ],
+        "path": "http:\/\/localhost\/api\/sale",
+        "per_page": 15,
+        "to": 2,
+        "total": 2
+    }
 }
 ```
 # <a name="secao7">/api/sale/create</a>
@@ -306,25 +306,25 @@ curl --request POST \
 
 ```json
 {
-	"data": {
-		"sale_id": 3,
-		"amount": 27600,
-		"status": "APPROVED",
-		"products": [
-			{
-				"product_id": 1,
-				"name": "Motorola",
-				"price": 1300,
-				"amount": 2
-			},
-			{
-				"product_id": 4,
-				"name": "Play 5",
-				"price": 5000,
-				"amount": 5
-			}
-		]
-	}
+    "data": {
+        "sale_id": 3,
+        "amount": 27600,
+        "status": "APPROVED",
+        "products": [
+            {
+                "product_id": 1,
+                "name": "Motorola",
+                "price": 1300,
+                "amount": 2
+            },
+            {
+                "product_id": 4,
+                "name": "Play 5",
+                "price": 5000,
+                "amount": 5
+            }
+        ]
+    }
 }
 ```
 # <a name="secao8">/api/sale/{sale}</a> 
