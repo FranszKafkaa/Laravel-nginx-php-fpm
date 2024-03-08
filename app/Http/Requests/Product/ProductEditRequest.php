@@ -27,6 +27,7 @@ class ProductEditRequest extends FormRequest
             ],
             'price' => [
                 'numeric',
+                'min:1',
             ],
 
             'description' => [
@@ -39,6 +40,7 @@ class ProductEditRequest extends FormRequest
     {
         return [
             'name.string' => 'Name deve ser uma string',
+            'price.min' => 'o valor do preço não pode ser menor que :min',
             'price.numeric' => 'Price deve ser numerico',
             'description.string' => 'description deve ser uma string',
         ];

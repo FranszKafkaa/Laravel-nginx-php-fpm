@@ -28,6 +28,7 @@ class ProductRequest extends FormRequest
             ],
             'price' => [
                 'required',
+                'min:1',
                 'numeric',
             ],
 
@@ -45,6 +46,7 @@ class ProductRequest extends FormRequest
             'name.string' => 'Name deve ser uma string',
 
             'price.required' => 'Price é obrigatorio',
+            'price.min' => 'o valor do preço não pode ser menor que :min',
             'price.numeric' => 'Price deve ser numerico',
 
             'description.required' => 'description é obrigatorio',

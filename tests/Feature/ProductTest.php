@@ -41,9 +41,10 @@ test('test create with error', function (array $data, string $message) {
         'errors' => [],
     ])->assertStatus(422);
 })->with([
-    'no name' => [['price' => 0, 'description' => 'um celular batutinha'], 'message' => 'Name é obrigatorio'],
-    'no description' => [['name' => 'nokia', 'price' => 0], 'message' => 'description é obrigatorio'],
+    'no name' => [['price' => 1, 'description' => 'um celular batutinha'], 'message' => 'Name é obrigatorio'],
+    'no description' => [['name' => 'nokia', 'price' => 1], 'message' => 'description é obrigatorio'],
     'no price' => [['name' => 'Nokia phone', 'description' => 'um celular batutinha'], 'message' => 'Price é obrigatorio'],
+    'price abaixo do minimo' => [['name' => 'sansung top', 'description' => 'um celular batutinha', 'price' => 0], 'message' => 'o valor do preço não pode ser menor que 1'],
     'price nao numerico' => [['name' => 'Nokia phone', 'description' => 'um celular batutinha', 'price' => 'oi'], 'message' => 'Price deve ser numerico'],
 ]);
 
