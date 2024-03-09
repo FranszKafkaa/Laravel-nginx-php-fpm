@@ -16,7 +16,16 @@
 <br>
 
 # Instalação do projeto
-- Vá ate o diretorio do projeto e execute o seguinte comando:
+- Vá ate o diretorio do projeto e execute os seguintes comando:
+```bash
+$ docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php83-composer:latest \
+    composer install --ignore-platform-reqs
+```
+
 ```bash
 $  ./vendor/bin/sail build
 ```
