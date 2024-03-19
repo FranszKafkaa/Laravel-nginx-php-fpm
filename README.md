@@ -1,5 +1,4 @@
-# Teste Backend Adoorei 
-### Teste para a vaga de backend na empresa Adoorei
+# Projeto backend em laravel
 
 ### Tecnologias Usadas
 <ul>
